@@ -1,14 +1,9 @@
-% Created 2016-08-07 Sun 00:13
-
-\documentclass[nofonts]{ctexart}
-\author{Robin}
-\setCJKmainfont[ItalicFont={AR PL UKai CN}]{AR PL UMing CN} 
-\setCJKsansfont{WenQuanYi Zen Hei} 
-\setCJKmonofont{WenQuanYi Zen Hei Mono} 
-
+% Created 2016-08-07 Sun 09:15
+\documentclass[11pt]{article}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{fixltx2e}
+\usepackage{zhfontcfg}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{float}
@@ -36,9 +31,9 @@
 \maketitle
 \tableofcontents
 
-\section{latex}
-\label{sec:orgheadline10}
-\subsection{gs}
+\section{latex测试}
+\label{sec:orgheadline11}
+\subsection{公式}
 \label{sec:orgheadline1}
 \(\frac{1}{\sqrt{2\pi\sigma^2}}e^{ -\frac{(x-\mu)^2}{2\sigma^2} }\)
 \subsection{表格caption}
@@ -98,7 +93,7 @@ img/1.jpg width 5cm 45}
 之前这份文件转换到latex pdf是没有问题的,但是似乎这天电脑上的什么配置被搞坏了,
 所以只有等到之后有时间重装下系统来修复了,所以暂时只能输出html了
 \subsection{pdf测试结果}
-\label{sec:orgheadline9}
+\label{sec:orgheadline10}
 虽然xelatex在转换中报错了,但是结果很好
 表格是居中的,不过caption在顶部
 图片显示正常
@@ -112,4 +107,14 @@ img/1.jpg width 5cm 45}
 
 如果不用这个模板其他的图片表格就会显示正常.
 图片也可以调整大小.
+2016-08-07 08:10:05 Sun NZST
+测试发现实际上出问题的不是ctexart模板,而是使用xeCJK后,section标题中的中文就会报错
+\subsubsection{结论}
+\label{sec:orgheadline9}
+\begin{itemize}
+\item 不能用ctexart模板,因为图片表格是必须的.
+\item 因此pdf无法用中文,但是html可以
+\item 所以pdf可以展示文本格式,而中文只能留在html中
+\item 后期可以给中文段落加上特殊标记过滤掉,用稀疏树输出pdf
+\end{itemize}
 \end{document}
