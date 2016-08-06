@@ -9,7 +9,7 @@ build
 .project
 .pydevproject
 .directory
-*.tex
+test3.tex
 *.toc
 *.aux
 *.out
