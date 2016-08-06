@@ -1,4 +1,4 @@
-% Created 2016-08-06 Sat 23:31
+% Created 2016-08-07 Sun 00:13
 
 \documentclass[nofonts]{ctexart}
 \author{Robin}
@@ -36,9 +36,9 @@
 \maketitle
 \tableofcontents
 
-\section{latex测试}
+\section{latex}
 \label{sec:orgheadline10}
-\subsection{公式}
+\subsection{gs}
 \label{sec:orgheadline1}
 \(\frac{1}{\sqrt{2\pi\sigma^2}}e^{ -\frac{(x-\mu)^2}{2\sigma^2} }\)
 \subsection{表格caption}
@@ -46,7 +46,6 @@
     表格的问题是,caption显示的位置在顶部,
     而且表格并不居中,本来想测试下pdf的效果,不过latex坏了.所以暂且放着
 应该是可以解决的问题吧.
-$\backslash$#+ATTR\(_{\text{HTML}}\): class="center"
 
 \begin{table}[htb]
 \caption{\label{tab:orgtable1}
@@ -80,15 +79,15 @@ emacs中的文件补全还不熟悉,所以文件路径编辑可能要用vim做.
 \centering
 \includegraphics[width=.9\linewidth]{1.jpg}
 \caption{\label{fig:orgparagraph2}
-1.jpg}
+1.jpg width 100}
 \end{figure}
 \subsection{img/1.jpg}
 \label{sec:orgheadline6}
 \begin{figure}[htb]
 \centering
-\includegraphics[width=.9\linewidth]{img/1.jpg}
+\includegraphics[angle=45,width=5cm]{img/1.jpg}
 \caption{\label{fig:orgparagraph3}
-img/1.jpg}
+img/1.jpg width 5cm 45}
 \end{figure}
 \subsection{?}
 \label{sec:orgheadline7}
@@ -105,4 +104,12 @@ img/1.jpg}
 图片显示正常
 
 字体有缺失,标题中的中文显示不了
+
+2016-08-07 00:04:55 Sun NZST
+情况是这样的,
+中文需要使用ctexart模板
+但是这个模板使用本身就会报错.虽然中文会显示正确.
+
+如果不用这个模板其他的图片表格就会显示正常.
+图片也可以调整大小.
 \end{document}
