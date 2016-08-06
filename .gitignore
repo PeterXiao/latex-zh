@@ -1,0 +1,17 @@
+*.swp
+*.swo
+*.bak
+*.log
+*.pyc
+ctags
+.tags
+build
+.project
+.pydevproject
+.directory
+*.tex
+*.toc
+*.aux
+*.out
+*.pdf
+*.html
